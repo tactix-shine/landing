@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Tactix | Three NDIS header options</title><link rel="stylesheet" href="styles.css">
+<style>
+body{background:#edf1f6}.review-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;padding:22px 32px;background:white;border-bottom:1px solid var(--line)}.review-brand{font-size:15px;font-weight:600}.review-brand span{display:block;font-size:12px;font-weight:400;margin-top:4px}.modes{display:flex;gap:4px;padding:4px;background:var(--sky);border-radius:8px}.modes button{min-height:44px;border:0;border-radius:5px;padding:10px 22px;background:transparent;color:var(--blue);font:600 13px var(--sans);cursor:pointer}.modes button[aria-pressed=true]{background:var(--blue);color:white}.review-intro{max-width:1500px;margin:auto;padding:32px 28px 4px}.review-intro h1{font:400 38px/1.2 var(--serif);letter-spacing:-.03em}.review-intro p{font-size:14px;margin-top:12px;max-width:80ch;color:var(--ink)}.options{max-width:1500px;margin:auto;padding:0 28px 40px;display:grid;gap:36px}.option-caption{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin:28px 0 16px}.option-caption h2{font:600 18px/1.4 var(--sans);letter-spacing:-.02em}.option-caption p{font-size:13px;max-width:75ch;color:var(--ink);margin-top:8px}.option-caption a{font-size:12px;white-space:nowrap;min-height:44px;display:flex;align-items:center}.frame-area{min-width:0}.stage{background:white;box-shadow:0 5px 24px #1739630d;overflow:hidden;margin:auto}.stage iframe{display:block;border:0;transform-origin:top left;background:white;max-width:none}.phone .options{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}.phone .option-caption{display:block;min-height:170px}.phone .stage{border-radius:20px;outline:5px solid #d0d9e6}.review-footer{max-width:1500px;margin:auto;padding:0 28px 32px;font-size:12px;color:var(--ink)}@media(max-width:900px){.phone .options{grid-template-columns:1fr}.phone .option-caption{min-height:0}.phone .option-caption p{max-width:65ch}.review-intro h1{font-size:32px}}@media(max-width:540px){.review-bar{padding:18px 20px}.options{padding-inline:16px}.review-intro{padding-inline:20px}.option-caption{display:block}.option-caption a{margin-top:6px}}
+</style>
+</head>
+<body>
+<header class="review-bar"><div class="review-brand">Tactix <span>NDIS header studies</span></div><div class="modes" role="group" aria-label="Preview device"><button type="button" data-mode="desktop" aria-pressed="true">Desktop</button><button type="button" data-mode="phone" aria-pressed="false">Phone</button></div><a href="preview.html" style="font-size:12px">Current website</a></header>
+<div class="review-intro"><h1>Make NDIS the first thing people see.</h1><p>Three header options in your existing visual style. Each removes “Our approach” from navigation and leads with NDIS cleaning. The same proposed hero appears below each header so you can compare them.</p></div>
+<main class="options">
+ <section class="option"><div class="option-caption"><div><h2>1. NDIS first</h2><p>My recommendation. A quiet white header, NDIS beside the brand, and one clear NDIS enquiry action. Other services stay easy to find.</p></div><a href="header-design.html?concept=1" target="_blank" rel="noopener">Open option 1</a></div><div class="frame-area"><div class="stage"><iframe src="header-design.html?concept=1" title="Option 1, NDIS first" width="1440" height="680"></iframe></div></div></section>
+ <section class="option"><div class="option-caption"><div><h2>2. Blue NDIS banner</h2><p>A slim blue band announces NDIS before the main navigation. More prominent branding, with room to keep Gallery in the header.</p></div><a href="header-design.html?concept=2" target="_blank" rel="noopener">Open option 2</a></div><div class="frame-area"><div class="stage"><iframe src="header-design.html?concept=2" title="Option 2, Blue NDIS banner" width="1440" height="680"></iframe></div></div></section>
+ <section class="option"><div class="option-caption"><div><h2>3. Service navigation</h2><p>NDIS gets the largest service link. Residential and end-of-lease cleaning remain visible in a separate row. The tallest header of the three.</p></div><a href="header-design.html?concept=3" target="_blank" rel="noopener">Open option 3</a></div><div class="frame-area"><div class="stage"><iframe src="header-design.html?concept=3" title="Option 3, Service navigation" width="1440" height="680"></iframe></div></div></section>
+</main>
+<p class="review-footer" aria-live="polite" id="device-note">Desktop previews at 1440px. Scroll within each frame to see the rest of its opening section. All links lead to the existing service pages or contact details.</p>
+<script>
+ const sizes={desktop:[1440,680],phone:[390,844]};
+ let mode='desktop';
+ function fit(){
+  const [width,height]=sizes[mode];
+  document.querySelectorAll('.frame-area').forEach(area=>{
+   const scale=Math.min(1,area.clientWidth/width);
+   const stage=area.querySelector('.stage'),frame=area.querySelector('iframe');
+   frame.style.width=width+'px';frame.style.height=height+'px';frame.style.transform='scale('+scale+')';
+   stage.style.width=width*scale+'px';stage.style.height=height*scale+'px';
+  });
+ }
+ document.querySelectorAll('[data-mode]').forEach(button=>button.addEventListener('click',()=>{
+  mode=button.dataset.mode;document.body.classList.toggle('phone',mode==='phone');
+  document.querySelectorAll('[data-mode]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+  document.getElementById('device-note').textContent=mode==='phone'?'Phone previews at 390px. Scroll inside each phone to see the rest of its opening section.':'Desktop previews at 1440px. Scroll within each frame to see the rest of its opening section.';
+  fit();
+ }));
+ const observer=new ResizeObserver(fit);document.querySelectorAll('.frame-area').forEach(area=>observer.observe(area));fit();
+</script>
+</body>
+</html>

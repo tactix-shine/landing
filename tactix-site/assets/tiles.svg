@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="288" viewBox="0 0 96 288">
+  <defs><path id="star" d="M24 2C27 15 33 21 46 24C33 27 27 33 24 46C21 33 15 27 2 24C15 21 21 15 24 2Z"/></defs>
+  <path fill="#fff" d="M0 0h96v288H0z"/>
+  <g fill="#1d4789"><path d="M0 0h48v48H0zM48 48h48v48H48zM0 96h48v48H0zM48 144h48v48H48zM0 192h48v48H0zM48 240h48v48H48z"/><use href="#star" x="48"/><path d="M0 60l48 14v13L0 73zM60 108h12v24h24v12H60zM0 150h30v30H18v-18H0zM48 204l48 14v13l-48-14z"/><use href="#star" y="240"/></g>
+  <g fill="#fff"><circle cx="24" cy="24" r="23"/><circle cx="72" cy="72" r="8"/><use href="#star" y="96"/><use href="#star" x="48" y="144"/><circle cx="24" cy="216" r="8"/><circle cx="72" cy="264" r="23"/></g>
+  <g fill="#1d4789"><circle cx="24" cy="24" r="12"/><circle cx="72" cy="264" r="12"/></g>
+  <g fill="#a7deca"><circle cx="8" cy="90" r="8"/><circle cx="58" cy="106" r="8"/><circle cx="34" cy="184" r="8"/><circle cx="88" cy="200" r="8"/></g>
+</svg>

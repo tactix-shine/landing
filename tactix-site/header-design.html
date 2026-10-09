@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Tactix | NDIS header concept</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.concept[hidden]{display:none}
+.study-header{background:white;border-bottom:1px solid var(--line)}
+.header-row{display:flex;align-items:center;gap:30px;min-height:112px;padding:24px var(--gutter)}
+.header-logo{display:grid;gap:7px;flex:none}
+.header-logo p{font-size:11px;line-height:1.4;letter-spacing:.02em}
+.header-links{display:flex;align-items:center;gap:28px;margin-left:auto}
+.header-links a{font-size:14px;text-decoration:none;white-space:nowrap;min-height:44px;display:flex;align-items:center}
+.header-links a:hover{text-decoration:underline}
+.header-links .ndis-link{font-weight:600;text-decoration:underline;text-decoration-color:var(--mint);text-decoration-thickness:4px;text-underline-offset:10px}
+.header-action{font-size:13px;min-height:50px;gap:12px;white-space:nowrap}
+.mobile-call{display:none}
+.ndis-banner{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:10px var(--gutter);background:var(--blue);color:white;font-size:13px}
+.ndis-banner p{display:flex;align-items:center;gap:12px}
+.ndis-banner svg{width:17px;height:17px;fill:var(--mint);flex:none}
+.ndis-banner a{font-weight:600;text-decoration:none;min-height:24px}
+.ndis-banner a:focus-visible{outline-color:var(--mint)}
+.ndis-banner+.header-row{min-height:100px}
+.editorial-line{font:400 22px/1.3 var(--serif);max-width:24ch;margin-left:18px}
+.header-phone{margin-left:auto;text-decoration:none;font-size:14px;font-weight:600;white-space:nowrap}
+.service-nav{display:grid;grid-template-columns:1.4fr 1fr 1.15fr .8fr;padding-inline:var(--gutter);border-top:1px solid var(--line)}
+.service-nav a{display:flex;align-items:center;justify-content:center;gap:24px;padding:18px 24px;min-height:65px;font:400 20px/1.3 var(--serif);text-decoration:none;border-right:1px solid var(--line)}
+.service-nav a:last-child{border-right:0}
+.service-nav a:hover{background:var(--sky)}
+.service-nav .ndis-link{background:var(--mint-pale);justify-content:space-between;font-family:var(--sans);font-size:17px;font-weight:600}
+.service-nav .ndis-link:hover{background:var(--mint)}
+.study-hero{min-height:530px}
+.study-hero .hero-copy{padding-top:42px;padding-bottom:44px;width:64%}
+.study-hero h1{font-size:clamp(46px,4.8vw,70px)}
+.study-hero h1 span{white-space:normal}
+.study-hero h1 strong{font-size:.87em;max-width:12ch}
+.study-hero .hero-description{max-width:32ch;font-size:23px;margin-top:24px}
+.study-hero .hero-note{font-size:12px;font-weight:400;max-width:42ch}
+.study-hero .hero-image{width:57%}
+.hero-actions .text-link{margin-top:0;min-height:52px;font-size:13px;padding-inline:8px}
+.study-footer{display:flex;justify-content:space-between;gap:20px;padding:22px var(--gutter);font-size:13px;background:var(--sky)}
+@media(min-width:769px) and (max-width:1199px){
+ .header-row{gap:18px;padding:20px 28px;flex-wrap:wrap}.header-links{gap:20px;order:3;width:100%;justify-content:flex-start;margin:0}.header-action{margin-left:auto}.header-row .brand{width:158px}
+ .editorial-line{font-size:20px;margin-left:0}.header-phone{margin-left:auto}.service-nav{padding-inline:0}.service-nav a{padding-inline:18px;font-size:18px}.service-nav .ndis-link{font-size:15px}
+ .study-hero .hero-copy{width:73%}.study-hero .hero-description{max-width:30ch;font-size:22px}
+}
+@media(max-width:768px){
+ .header-row{display:grid;grid-template-columns:1fr auto;gap:13px;padding:18px var(--gutter) 12px;min-height:0}
+ .header-logo{gap:5px}.header-logo p{font-size:10px}.header-row .brand{width:144px}
+ .mobile-call{display:inline-flex;grid-column:2;grid-row:1;font-size:12px;min-height:44px;padding:10px 18px}
+ .header-action,.header-phone{display:none}.header-links{grid-column:1/-1;grid-row:2;justify-content:space-between;gap:12px;margin:0}.header-links a{font-size:12px;min-height:46px}
+ .header-links .ndis-link{text-decoration-thickness:3px;text-underline-offset:7px}
+ .ndis-banner{padding:10px var(--gutter);font-size:11px;gap:10px}.ndis-banner p{gap:8px}.ndis-banner .banner-phone{display:none}.ndis-banner+.header-row{min-height:0}
+ .concept-two .header-links{flex-wrap:wrap;column-gap:22px;justify-content:flex-start}.concept-two .header-links a{min-height:38px}
+ .editorial-line{grid-column:1/-1;margin:0;font-size:18px;max-width:none}.concept-three .header-row{padding-bottom:18px}
+ .service-nav{padding:0;grid-template-columns:1fr 1fr}.service-nav a{font-size:16px;min-height:48px;padding:12px 20px;border:0}.service-nav .ndis-link{grid-column:1/-1;font-size:15px;min-height:54px;padding-inline:var(--gutter);background:var(--blue);color:white}.service-nav .ndis-link:hover{background:var(--blue-dark)}.service-nav .ndis-link:focus-visible{outline-color:var(--mint);outline-offset:-5px}.service-nav a:last-child{display:none}
+ .study-hero{min-height:0}.study-hero .hero-copy{padding:30px var(--gutter);width:100%}.study-hero h1{font-size:42px}.study-hero h1 strong{font-size:.9em;max-width:13ch}.study-hero .hero-description{font-size:21px;max-width:32ch;margin-top:24px}.study-hero .hero-note{font-size:12px;margin-top:16px}.study-hero .hero-image{width:100%;height:230px}.hero-actions{display:flex;flex-direction:column;align-items:stretch}.hero-actions .text-link{justify-content:center;min-height:44px}.hero-actions .button{font-size:13px}
+ .study-footer{display:block;font-size:12px}.study-footer a{display:inline-block;margin-top:10px;min-height:44px}
+}
+@media(max-width:359px){.header-row .brand{width:130px}.header-links{gap:10px}.header-links a{font-size:11px}.study-hero h1{font-size:38px}.study-hero .hero-description{font-size:20px}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol><symbol id="spark" viewBox="0 0 48 48"><path d="M24 1C28 15 33 20 47 24C33 28 28 33 24 47C20 33 15 28 1 24C15 20 20 15 24 1Z"/></symbol></svg>
+<div class="page-shell">
+<div class="brand-rail" aria-hidden="true"></div>
+<header class="study-header">
+ <div class="concept concept-one" data-concept="1">
+  <div class="header-row">
+   <div class="header-logo"><a class="brand" href="index.html" target="_top" aria-label="Tactix home"><img src="assets/brand-card.jpeg" alt="" width="2048" height="1262"></a><p>NDIS home cleaning</p></div>
+   <nav class="header-links" aria-label="Main navigation"><a class="ndis-link" href="ndis-cleaning/" target="_top">NDIS cleaning</a><a href="index.html#services" target="_top">Other services</a><a href="index.html#contact" target="_top">Contact</a></nav>
+   <a class="button header-action" href="ndis-cleaning/#contact" target="_top">Enquire about NDIS <svg class="arrow" aria-hidden="true"><use href="#arrow"/></svg></a>
+   <a class="button mobile-call" href="tel:+61481993560">Call Tactix</a>
+  </div>
+ </div>
+ <div class="concept concept-two" data-concept="2" hidden>
+  <div class="ndis-banner"><p><svg aria-hidden="true"><use href="#spark"/></svg>NDIS cleaning for your home</p><a class="banner-phone" href="tel:+61481993560">0481 993 560</a></div>
+  <div class="header-row">
+   <a class="brand" href="index.html" target="_top" aria-label="Tactix home"><img src="assets/brand-card.jpeg" alt="" width="2048" height="1262"></a>
+   <nav class="header-links" aria-label="Main navigation"><a class="ndis-link" href="ndis-cleaning/" target="_top">NDIS cleaning</a><a href="index.html#services" target="_top">Other services</a><a href="gallery/" target="_top">Gallery</a><a href="index.html#contact" target="_top">Contact</a></nav>
+   <a class="button header-action" href="ndis-cleaning/#contact" target="_top">Talk to us <svg class="arrow" aria-hidden="true"><use href="#arrow"/></svg></a>
+   <a class="button mobile-call" href="tel:+61481993560">Call Tactix</a>
+  </div>
+ </div>
+ <div class="concept concept-three" data-concept="3" hidden>
+  <div class="header-row">
+   <a class="brand" href="index.html" target="_top" aria-label="Tactix home"><img src="assets/brand-card.jpeg" alt="" width="2048" height="1262"></a>
+   <p class="editorial-line">Cleaning with your<br> routine in mind.</p>
+   <a class="header-phone" href="tel:+61481993560">0481 993 560</a>
+   <a class="button header-action" href="ndis-cleaning/#contact" target="_top">Get in touch</a>
+   <a class="button mobile-call" href="tel:+61481993560">Call Tactix</a>
+  </div>
+  <nav class="service-nav" aria-label="Main navigation"><a class="ndis-link" href="ndis-cleaning/" target="_top">NDIS cleaning <svg class="arrow" aria-hidden="true"><use href="#arrow"/></svg></a><a href="house-cleaning/" target="_top">Residential</a><a href="end-of-lease-cleaning/" target="_top">End of lease</a><a href="index.html#contact" target="_top">Contact</a></nav>
+ </div>
+</header>
+<main id="main">
+ <section class="hero study-hero" aria-labelledby="hero-title">
+  <div class="hero-copy"><h1 id="hero-title"><span>NDIS cleaning.</span><strong>With care for<br> your home.</strong></h1><p class="hero-description">Home cleaning for NDIS participants across Melbourne, planned around your routine.</p><p class="hero-note">Residential and end-of-lease cleaning also available.</p><div class="hero-actions"><a class="button" href="ndis-cleaning/" target="_top">Explore NDIS cleaning <svg class="arrow" aria-hidden="true"><use href="#arrow"/></svg></a><a class="text-link" href="tel:+61481993560">Call 0481 993 560</a></div></div>
+  <div class="hero-image"><img src="assets/living-room-1536.webp" alt="" width="1536" height="1024"></div>
+ </section>
+ <div class="study-footer"><p>Where precision meets perfection.</p><a href="index.html#services" target="_top">View all cleaning services</a></div>
+</main>
+</div>
+<script>
+ const requested=new URLSearchParams(location.search).get('concept');
+ const concept=['1','2','3'].includes(requested)?requested:'1';
+ document.querySelectorAll('[data-concept]').forEach(item=>item.hidden=item.dataset.concept!==concept);
+</script>
+</body>
+</html>
