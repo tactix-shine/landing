@@ -2,3 +2,5 @@
 node_modules/
 # Original client photos. The site uses the resized copies in tactix-site/assets/jobs/.
 images/
+
+*audit/
